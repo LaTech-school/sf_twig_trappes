@@ -6,8 +6,13 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+
+import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 import './styles/app.css';
 import './styles/custom.css';
+
+
 
 // start the Stimulus application
 // import './bootstrap';
@@ -18,3 +23,14 @@ import './styles/custom.css';
 
 // var prompt = new Prompt;
 //     prompt.question();
+
+
+
+// Import de jQuery
+import 'jquery';
+
+// Import de Popper.js
+import 'popper.js';
+
+// Import de Bootstrap js
+import 'bootstrap';
