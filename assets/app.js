@@ -13,4 +13,8 @@ import './styles/custom.css';
 // import './bootstrap';
 
 // Add JavaScript
-import './controllers/prompt';
+// import './controllers/prompt';
+import { Prompt } from './controllers/prompt-alt';
+
+var prompt = new Prompt;
+    prompt.question();
