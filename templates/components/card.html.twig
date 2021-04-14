@@ -1,11 +1,25 @@
+{% set card_header = block('header') %}
+{% set card_body = block('body') %}
+{% set card_footer = block('footer') %}
+
 <div class="card" style="width: 200px;">
+
+    {% if card_header is not empty %}
     <div class="card-header">
-        {% block header %}Card Header{% endblock %}
+        {% block header %}{% endblock %}
     </div>
+    {% endif %}
+    
+    {% if card_body is not empty %}
     <div class="card-body">
-        {% block body %}Card Body{% endblock %}
+        {% block body %}{% endblock %}
     </div>
+    {% endif %}
+    
+    {% if card_footer is not empty %}
     <div class="card-footer">
         {% block footer %}Card Footer{% endblock %}
     </div>
+    {% endif %}
+
 </div>

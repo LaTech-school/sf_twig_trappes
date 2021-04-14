@@ -59,7 +59,12 @@ la couleur est rouge
 <h2>Embeded</h2>
 
 {% embed "components/card.html.twig" %}
-    
+    {% block header %}
+        Entete de card personnalisé
+    {% endblock %}
+    {% block body %}
+        BODY de card personnalisé
+    {% endblock %}
 {% endembed %}
 
 
