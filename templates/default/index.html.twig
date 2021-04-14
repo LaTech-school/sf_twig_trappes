@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{# Definition d'une variable dans une vue TWIG #}
+{% set controller_name = "Declaration d'une variable" %}
+{% set title = "Titre de ma page" %}
+
+{# La fonction parent() reprend le contenu du block parent #}
+{% block title %}{{ title }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+
+<h2>DataBinding</h2>
+{{ variable_pour_twig }}
+
+
+<h2>Structure conditionnelle if</h2>
+{% if color == 'red' %}
+la couleur est rouge
+{% endif %}
+
+<h2>Structure conditionnelle if-else</h2>
+{% if color == 'green' %}
+    c'est vert !
+{% else %}
+    ce n'est pas vert.
+{% endif %}
+
+
+
+<h2>Boucle de 0 à 10</h2>
+{% for i in 0..10 %}
+    i = {{ i }} <br>
+{% endfor %}
+
+<h2>Boucle sur tableau</h2>
+{% for fruit in fruits %}
+    - {{ fruit }} <br>
+{% endfor %}
+
+<hr>
+
+{% for user in users %}
+    {{ user.firstname }} <br>
+{% endfor %}
+
+
+<h2>Inclusion (include)</h2>
+{% include "components/alert.html.twig" %}
+
+<h2>Inclusion avec variable (include ... with )</h2>
+<p>on limite les propriété avec le moty clé "only"</p>
+{% include "components/alert-alt.html.twig" with {
+    type: "danger",
+    message: "Votre action à échoué",
+} only %}
+
+{% endblock %}
