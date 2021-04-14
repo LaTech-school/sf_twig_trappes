@@ -14,7 +14,7 @@ import './styles/custom.css';
 
 // Add JavaScript
 // import './controllers/prompt';
-import { Prompt } from './controllers/prompt-alt';
+// import { Prompt } from './controllers/prompt-alt';
 
-var prompt = new Prompt;
-    prompt.question();
+// var prompt = new Prompt;
+//     prompt.question();
